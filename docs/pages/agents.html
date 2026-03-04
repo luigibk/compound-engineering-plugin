@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8" />
   <title>Agent Reference - Compounding Engineering</title>
-  <meta content="Complete reference for all 23 specialized AI agents in the Compounding Engineering plugin." name="description" />
+  <meta content="Complete reference for all 29 specialized AI agents in the Compounding Engineering plugin." name="description" />
   <meta content="width=device-width, initial-scale=1" name="viewport" />
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
@@ -33,7 +33,7 @@
         <div class="nav-section">
           <h3>Reference</h3>
           <ul>
-            <li><a href="agents.html" class="active">Agents (23)</a></li>
+            <li><a href="agents.html" class="active">Agents (29)</a></li>
             <li><a href="commands.html">Commands (13)</a></li>
             <li><a href="skills.html">Skills (11)</a></li>
             <li><a href="mcp-servers.html">MCP Servers (2)</a></li>
@@ -48,8 +48,8 @@
         <div class="nav-section">
           <h3>On This Page</h3>
           <ul>
-            <li><a href="#review-agents">Review (10)</a></li>
-            <li><a href="#research-agents">Research (4)</a></li>
+            <li><a href="#review-agents">Review (15)</a></li>
+            <li><a href="#research-agents">Research (5)</a></li>
             <li><a href="#workflow-agents">Workflow (5)</a></li>
             <li><a href="#design-agents">Design (3)</a></li>
             <li><a href="#docs-agents">Docs (1)</a></li>
@@ -75,7 +75,7 @@
       <article class="docs-article">
         <h1><i class="fa-solid fa-users-gear color-accent"></i> Agent Reference</h1>
         <p class="lead">
-          Think of agents as your expert teammates who never sleep. You've got 23 specialists here—each one obsessed with a single domain. Call them individually when you need focused expertise, or orchestrate them together for multi-angle analysis. They're opinionated, they're fast, and they remember your codebase better than you do.
+          Think of agents as your expert teammates who never sleep. You've got 29 specialists here—each one obsessed with a single domain. Call them individually when you need focused expertise, or orchestrate them together for multi-angle analysis. They're opinionated, they're fast, and they remember your codebase better than you do.
         </p>
 
         <div class="usage-box">
@@ -95,7 +95,7 @@ claude agent security-sentinel "Audit the payment flow"</code></pre>
 
         <!-- Review Agents -->
         <section id="review-agents">
-          <h2><i class="fa-solid fa-code-pull-request"></i> Review Agents (10)</h2>
+          <h2><i class="fa-solid fa-code-pull-request"></i> Review Agents (15)</h2>
           <p>Your code review dream team. These agents catch what humans miss at 2am—security holes, performance cliffs, architectural drift, and those "it works but I hate it" moments. They're picky. They disagree with each other. That's the point.</p>
 
           <div class="agent-detail" id="kieran-rails-reviewer">
@@ -316,11 +316,110 @@ claude agent security-sentinel "Audit the payment flow"</code></pre>
               <pre><code>claude agent code-simplicity-reviewer</code></pre>
             </div>
           </div>
+
+          <div class="agent-detail" id="julik-frontend-races-reviewer">
+            <div class="agent-detail-header">
+              <h3>julik-frontend-races-reviewer</h3>
+              <span class="agent-badge">JavaScript</span>
+            </div>
+            <p class="agent-detail-description">
+              Race conditions in JavaScript don't throw exceptions—they cause subtle UI bugs that only happen when a user clicks fast. This agent reviews Stimulus controllers and async JavaScript for timing issues, DOM lifecycle problems, and event handler leaks.
+            </p>
+            <h4>Key Focus Areas</h4>
+            <ul>
+              <li>Race conditions in async/await chains</li>
+              <li>DOM lifecycle timing issues</li>
+              <li>Stimulus controller connect/disconnect mismatches</li>
+              <li>Promise rejection handling</li>
+              <li>Event listener accumulation and leaks</li>
+            </ul>
+            <div class="card-code-block">
+              <pre><code>claude agent julik-frontend-races-reviewer</code></pre>
+            </div>
+          </div>
+
+          <div class="agent-detail" id="agent-native-reviewer">
+            <div class="agent-detail-header">
+              <h3>agent-native-reviewer</h3>
+              <span class="agent-badge">AI</span>
+            </div>
+            <p class="agent-detail-description">
+              If a user can click a button, an agent should be able to click it too. This agent audits code for Action Parity and Context Parity — the two principles of agent-native architecture. Run after adding UI features, MCP tools, or system prompts.
+            </p>
+            <h4>Review Dimensions</h4>
+            <ul>
+              <li><strong>Action Parity</strong> — every user action is agent-accessible</li>
+              <li><strong>Context Parity</strong> — agents see the same state as users</li>
+              <li><strong>Shared Workspace</strong> — agents and users operate on the same data</li>
+            </ul>
+            <div class="card-code-block">
+              <pre><code>claude agent agent-native-reviewer</code></pre>
+            </div>
+          </div>
+
+          <div class="agent-detail" id="data-migration-expert">
+            <div class="agent-detail-header">
+              <h3>data-migration-expert</h3>
+              <span class="agent-badge critical">Data</span>
+            </div>
+            <p class="agent-detail-description">
+              ID mappings are easy to swap. Column renames are easy to get backwards. This agent validates data migrations against production reality — checking that your mapping tables actually match what's in the database, and that your backfill won't silently corrupt rows.
+            </p>
+            <h4>Validation Areas</h4>
+            <ul>
+              <li>Verify ID mappings match production data</li>
+              <li>Check for swapped source/target values</li>
+              <li>Validate enum conversion completeness</li>
+              <li>Ensure verification plans exist before destructive steps</li>
+            </ul>
+            <div class="card-code-block">
+              <pre><code>claude agent data-migration-expert</code></pre>
+            </div>
+          </div>
+
+          <div class="agent-detail" id="deployment-verification-agent">
+            <div class="agent-detail-header">
+              <h3>deployment-verification-agent</h3>
+              <span class="agent-badge critical">Deploy</span>
+            </div>
+            <p class="agent-detail-description">
+              Before you deploy a migration that touches millions of rows, someone should write down exactly what SQL queries will verify the data looks right after. This agent produces Go/No-Go checklists with verification SQL, rollback procedures, and monitoring plans.
+            </p>
+            <h4>Checklist Contents</h4>
+            <ul>
+              <li>Data invariants to verify pre/post deploy</li>
+              <li>SQL verification queries for each destructive step</li>
+              <li>Rollback procedure with exact commands</li>
+              <li>Go/No-Go decision criteria</li>
+            </ul>
+            <div class="card-code-block">
+              <pre><code>claude agent deployment-verification-agent</code></pre>
+            </div>
+          </div>
+
+          <div class="agent-detail" id="schema-drift-detector">
+            <div class="agent-detail-header">
+              <h3>schema-drift-detector</h3>
+              <span class="agent-badge">Data</span>
+            </div>
+            <p class="agent-detail-description">
+              Your PR touches three models, but schema.rb changed 47 lines and only 3 are related to your migrations. This agent cross-references schema.rb changes against actual migrations and flags anything that doesn't belong — preventing accidental schema drift from rebases.
+            </p>
+            <h4>Detection Method</h4>
+            <ul>
+              <li>Parse all migrations included in the PR</li>
+              <li>Cross-reference against schema.rb changes</li>
+              <li>Flag schema.rb changes without corresponding migrations</li>
+            </ul>
+            <div class="card-code-block">
+              <pre><code>claude agent schema-drift-detector</code></pre>
+            </div>
+          </div>
         </section>
 
         <!-- Research Agents -->
         <section id="research-agents">
-          <h2><i class="fa-solid fa-microscope"></i> Research Agents (4)</h2>
+          <h2><i class="fa-solid fa-microscope"></i> Research Agents (5)</h2>
           <p>Stop guessing. These agents dig through documentation, GitHub repos, git history, and real-world examples to give you answers backed by evidence. They read faster than you, remember more than you, and synthesize patterns you'd miss. Perfect for "how should I actually do this?" questions.</p>
 
           <div class="agent-detail" id="framework-docs-researcher">
@@ -404,6 +503,25 @@ claude agent security-sentinel "Audit the payment flow"</code></pre>
             </ul>
             <div class="card-code-block">
               <pre><code>claude agent repo-research-analyst</code></pre>
+            </div>
+          </div>
+
+          <div class="agent-detail" id="learnings-researcher">
+            <div class="agent-detail-header">
+              <h3>learnings-researcher</h3>
+              <span class="agent-badge">Research</span>
+            </div>
+            <p class="agent-detail-description">
+              Your team already solved this problem. Probably last quarter. This agent searches <code>docs/solutions/</code> by YAML frontmatter metadata to surface relevant past solutions before you start re-debugging. Institutional memory at grep speed.
+            </p>
+            <h4>Capabilities</h4>
+            <ul>
+              <li>Full-text and metadata search of <code>docs/solutions/</code></li>
+              <li>Match by symptom, module, error message, or root cause</li>
+              <li>Prevent repeated debugging of identical issues</li>
+            </ul>
+            <div class="card-code-block">
+              <pre><code>claude agent learnings-researcher "Find solutions for CORS production issues"</code></pre>
             </div>
           </div>
         </section>

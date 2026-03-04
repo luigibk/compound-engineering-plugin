@@ -301,7 +301,7 @@
 
         <!-- Review Agents -->
         <div class="agent-category">
-          <h3><i class="fa-solid fa-code-pull-request"></i> Review Agents (11)</h3>
+          <h3><i class="fa-solid fa-code-pull-request"></i> Review Agents (15)</h3>
           <div class="grid columns-2">
             <div class="agent-card">
               <div class="agent-header">
@@ -391,12 +391,44 @@
               <p class="agent-description">Review JavaScript and Stimulus code for race conditions, DOM event handling, promise management, and timer cleanup.</p>
               <code class="agent-usage">claude agent julik-frontend-races-reviewer</code>
             </div>
+            <div class="agent-card">
+              <div class="agent-header">
+                <span class="agent-name">agent-native-reviewer</span>
+                <span class="agent-badge">AI</span>
+              </div>
+              <p class="agent-description">Verify features are agent-native — any action a user can take, an agent can also take. Audits for Action Parity and Context Parity.</p>
+              <code class="agent-usage">claude agent agent-native-reviewer</code>
+            </div>
+            <div class="agent-card">
+              <div class="agent-header">
+                <span class="agent-name">data-migration-expert</span>
+                <span class="agent-badge critical">Data</span>
+              </div>
+              <p class="agent-description">Validates data migrations against production reality. Checks ID mappings, column renames, and enum conversions for correctness.</p>
+              <code class="agent-usage">claude agent data-migration-expert</code>
+            </div>
+            <div class="agent-card">
+              <div class="agent-header">
+                <span class="agent-name">deployment-verification-agent</span>
+                <span class="agent-badge critical">Deploy</span>
+              </div>
+              <p class="agent-description">Creates Go/No-Go deployment checklists with SQL verification queries, rollback procedures, and monitoring plans for risky data changes.</p>
+              <code class="agent-usage">claude agent deployment-verification-agent</code>
+            </div>
+            <div class="agent-card">
+              <div class="agent-header">
+                <span class="agent-name">schema-drift-detector</span>
+                <span class="agent-badge">Data</span>
+              </div>
+              <p class="agent-description">Detects unrelated schema.rb changes in PRs by cross-referencing against included migrations. Prevents accidental schema inclusions.</p>
+              <code class="agent-usage">claude agent schema-drift-detector</code>
+            </div>
           </div>
         </div>
 
         <!-- Research Agents -->
         <div class="agent-category">
-          <h3><i class="fa-solid fa-microscope"></i> Research Agents (4)</h3>
+          <h3><i class="fa-solid fa-microscope"></i> Research Agents (5)</h3>
           <div class="grid columns-2">
             <div class="agent-card">
               <div class="agent-header">
@@ -429,6 +461,14 @@
               </div>
               <p class="agent-description">Research repository structure and conventions. Understand project patterns and organization.</p>
               <code class="agent-usage">claude agent repo-research-analyst</code>
+            </div>
+            <div class="agent-card">
+              <div class="agent-header">
+                <span class="agent-name">learnings-researcher</span>
+                <span class="agent-badge">Research</span>
+              </div>
+              <p class="agent-description">Searches docs/solutions/ for relevant past solutions by frontmatter metadata. Surface institutional knowledge before implementing features.</p>
+              <code class="agent-usage">claude agent learnings-researcher</code>
             </div>
           </div>
         </div>
