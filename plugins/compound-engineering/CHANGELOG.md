@@ -83,6 +83,34 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 * **plugin:** add execution posture signaling to ce:plan-beta and ce:work ([#309](https://github.com/EveryInc/compound-engineering-plugin/issues/309)) ([748f72a](https://github.com/EveryInc/compound-engineering-plugin/commit/748f72a57f713893af03a4d8ed69c2311f492dbd))
 
+## [2.40.0] - 2026-02-28
+
+### Added
+
+- **Go language support** — 6 new agents and 4 new skills for idiomatic Go development, bringing the plugin to 35 agents and 23 skills.
+
+#### Agents
+
+- **`mehdi-go-reviewer`** (review) — Primary Go code reviewer enforcing idiomatic Go: error wrapping with `%w`, consumer-side interfaces, 5-second naming, zero-value design, and the "duplication > complexity" principle. Runs `go build`/`go vet` on entry.
+- **`go-concurrency-reviewer`** (review) — Specialist reviewer for goroutine lifecycle ownership, channel direction, race conditions, context propagation, and unbounded spawning. Runs `go build -race`/`go test -race` on entry.
+- **`go-performance-profiler`** (review) — Profiles heap escapes (`gcflags='-m'`), benchmark allocations (`-benchmem`), and pprof hotspots. Complements `performance-oracle` for Go-specific allocation analysis.
+- **`go-module-analyzer`** (research) — Audits `go.mod`/`go.sum` for CVEs (`govulncheck`), risky `replace` directives, pseudo-versions, stale dependencies, and mismatched `go` directive versions.
+- **`go-test-writer`** (workflow) — Writes complete table-driven tests with `t.Run`/`t.Parallel`, `t.Helper`/`testing.TB`, `t.Cleanup`, and optional benchmarks. Derives cases systematically (happy path, nil inputs, boundary values, cancelled contexts).
+- **`go-linter-advisor`** (workflow) — Runs `golangci-lint` and `go vet`, groups findings by linter, auto-fixes safe issues (formatting/imports), and offers to generate a starter `.golangci.yml` when none exists.
+
+#### Skills
+
+- **`go-idioms`** — Idiomatic Go reference covering naming conventions, interface design (consumer-side rule), error wrapping, struct embedding, zero-value design, defer pitfalls, and tooling (`//go:build`, `go:generate`, `ldflags`). Includes four reference files.
+- **`go-concurrency`** — Concurrency reference covering goroutine ownership, exit patterns, channel direction, `select` patterns, `errgroup` with `SetLimit`, weighted semaphore (`golang.org/x/sync`), `sync.Mutex`/`RWMutex`/`Once`/`Map`, and `sync.Cond`. Includes three reference files.
+- **`go-testing`** — Testing reference covering table-driven test anatomy, `t.Run`+`t.Parallel`, loop variable capture (Go 1.22 note), benchmarks with `b.ReportAllocs`, fuzz testing (Go 1.18+), and test file organisation.
+- **`go-modules`** — Module management reference covering `go.mod` directives, `replace` directive risk classification, `go mod tidy` CI pattern, workspace mode, vendoring, `govulncheck`, and common error fixes.
+
+#### Updates to existing files
+
+- **`setup` skill** — Auto-detects Go projects via `go.mod`; maps to `[mehdi-go-reviewer, go-concurrency-reviewer, code-simplicity-reviewer, security-sentinel, go-performance-profiler]` for auto-configure; adds Go option to the stack customisation question.
+
+---
+
 ## [2.39.0] - 2026-03-10
 
 ### Added

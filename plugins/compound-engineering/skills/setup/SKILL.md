@@ -38,6 +38,7 @@ test -f tsconfig.json && echo "typescript" || \
 test -f package.json && echo "javascript" || \
 test -f pyproject.toml && echo "python" || \
 test -f requirements.txt && echo "python" || \
+test -f go.mod && echo "go" || \
 echo "general"
 ```
 
@@ -55,6 +56,7 @@ Detected {type} project. How would you like to configure?
 - **Rails:** `[kieran-rails-reviewer, dhh-rails-reviewer, code-simplicity-reviewer, security-sentinel, performance-oracle]`
 - **Python:** `[kieran-python-reviewer, code-simplicity-reviewer, security-sentinel, performance-oracle]`
 - **TypeScript:** `[kieran-typescript-reviewer, code-simplicity-reviewer, security-sentinel, performance-oracle]`
+- **Go:** `[mehdi-go-reviewer, go-concurrency-reviewer, code-simplicity-reviewer, security-sentinel, go-performance-profiler]`
 - **General:** `[code-simplicity-reviewer, security-sentinel, performance-oracle, architecture-strategist]`
 
 ### If Customize → Step 3
@@ -70,6 +72,7 @@ Which stack should we optimize for?
 2. Rails - Ruby on Rails, adds DHH-style and Rails-specific reviewers
 3. Python - Adds Pythonic pattern reviewer
 4. TypeScript - Adds type safety reviewer
+5. Go — adds idiomatic Go reviewer and concurrency reviewer
 ```
 
 Only show options that differ from the detected type.
@@ -101,6 +104,7 @@ How thorough should reviews be?
 - Rails → `kieran-rails-reviewer, dhh-rails-reviewer`
 - Python → `kieran-python-reviewer`
 - TypeScript → `kieran-typescript-reviewer`
+- Go → `mehdi-go-reviewer, go-concurrency-reviewer`
 - General → (none)
 
 **Focus area agents:**
