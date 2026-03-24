@@ -25,7 +25,9 @@
         "code-review",
         "quality",
         "knowledge-management",
-        "image-generation"
+        "image-generation",
+        "go",
+        "golang"
       ],
       "source": "./plugins/compound-engineering"
     },

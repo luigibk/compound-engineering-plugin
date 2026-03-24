@@ -28,11 +28,14 @@ Agents are organized into categories for easier discovery.
 | `data-migrations-reviewer` | Migration safety with confidence calibration (ce:review-beta persona) |
 | `deployment-verification-agent` | Create Go/No-Go deployment checklists for risky data changes |
 | `dhh-rails-reviewer` | Rails review from DHH's perspective |
+| `go-concurrency-reviewer` | Review Go code for goroutine leaks, channel misuse, and race conditions |
+| `go-performance-profiler` | Audit Go code for heap escapes, allocations, and pprof hotspots |
 | `julik-frontend-races-reviewer` | Review JavaScript/Stimulus code for race conditions |
 | `kieran-rails-reviewer` | Rails code review with strict conventions |
 | `kieran-python-reviewer` | Python code review with strict conventions |
 | `kieran-typescript-reviewer` | TypeScript code review with strict conventions |
 | `maintainability-reviewer` | Coupling, complexity, naming, dead code (ce:review-beta persona) |
+| `mehdi-go-reviewer` | Go code review with strict idiomatic conventions |
 | `pattern-recognition-specialist` | Analyze code for patterns and anti-patterns |
 | `performance-oracle` | Performance analysis and optimization |
 | `performance-reviewer` | Runtime performance with confidence calibration (ce:review-beta persona) |
@@ -61,6 +64,7 @@ Agents are organized into categories for easier discovery.
 | `framework-docs-researcher` | Research framework documentation and best practices |
 | `git-history-analyzer` | Analyze git history and code evolution |
 | `issue-intelligence-analyst` | Analyze GitHub issues to surface recurring themes and pain patterns |
+| `go-module-analyzer` | Analyze go.mod/go.sum for dependency health and vulnerabilities |
 | `learnings-researcher` | Search institutional learnings for relevant past solutions |
 | `repo-research-analyst` | Research repository structure and conventions |
 
@@ -77,6 +81,9 @@ Agents are organized into categories for easier discovery.
 | Agent | Description |
 |-------|-------------|
 | `bug-reproduction-validator` | Systematically reproduce and validate bug reports |
+| `every-style-editor` | Edit content to conform to Every's style guide |
+| `go-linter-advisor` | Run golangci-lint on Go code and auto-fix safe issues |
+| `go-test-writer` | Write table-driven Go tests following standard testing conventions |
 | `lint` | Run linting and code quality checks on Ruby and ERB files |
 | `pr-comment-resolver` | Address PR comments and implement fixes |
 | `spec-flow-analyzer` | Analyze user flows and identify gaps in specifications |
@@ -129,6 +136,15 @@ Core workflow commands use `ce:` prefix to unambiguously identify them as compou
 | Skill | Description |
 |-------|-------------|
 | `agent-native-architecture` | Build AI agents using prompt-native architecture |
+
+### Go Development
+
+| Skill | Description |
+|-------|-------------|
+| `go-concurrency` | Goroutines, channels, sync primitives, and context propagation |
+| `go-idioms` | Idiomatic Go patterns, naming conventions, interfaces, errors, and tooling |
+| `go-modules` | Module graph, replace directives, workspace mode, and vendoring |
+| `go-testing` | Table-driven tests, benchmarks, fuzz testing, and test helpers |
 
 ### Development Tools
 
