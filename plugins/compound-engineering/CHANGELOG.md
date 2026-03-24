@@ -9,6 +9,38 @@ All notable changes to the compound-engineering plugin will be documented in thi
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.52.0](https://github.com/luigibk/compound-engineering-plugin/compare/compound-engineering-v2.51.0...compound-engineering-v2.52.0) (2026-03-24)
+
+
+### Features
+
+* add `ce:review-beta` with structured persona pipeline ([#348](https://github.com/luigibk/compound-engineering-plugin/issues/348)) ([e932276](https://github.com/luigibk/compound-engineering-plugin/commit/e9322768664e194521894fe770b87c7dabbb8a22))
+* add claude-permissions-optimizer skill ([#298](https://github.com/luigibk/compound-engineering-plugin/issues/298)) ([eaaba19](https://github.com/luigibk/compound-engineering-plugin/commit/eaaba1928bcfa00ec85468df2a07effead45159b))
+* add execution mode toggle and context pressure bounds to parallel skills ([#336](https://github.com/luigibk/compound-engineering-plugin/issues/336)) ([216d6df](https://github.com/luigibk/compound-engineering-plugin/commit/216d6dfb2c9320c3354f8c9f30e831fca74865cd))
+* add optional high-level technical design to plan-beta skills ([#322](https://github.com/luigibk/compound-engineering-plugin/issues/322)) ([3ba4935](https://github.com/luigibk/compound-engineering-plugin/commit/3ba4935926b05586da488119f215057164d97489))
+* **ce-work:** add Codex delegation mode ([#328](https://github.com/luigibk/compound-engineering-plugin/issues/328)) ([341c379](https://github.com/luigibk/compound-engineering-plugin/commit/341c37916861c8bf413244de72f83b93b506575f))
+* edit resolve_todos_parallel skill for complete todo lifecycle ([#292](https://github.com/luigibk/compound-engineering-plugin/issues/292)) ([88c89bc](https://github.com/luigibk/compound-engineering-plugin/commit/88c89bc204c928d2f36e2d1f117d16c998ecd096))
+* fix skill transformation pipeline across all targets ([#334](https://github.com/luigibk/compound-engineering-plugin/issues/334)) ([4087e1d](https://github.com/luigibk/compound-engineering-plugin/commit/4087e1df82138f462a64542831224e2718afafa7))
+* **git-worktree:** auto-trust mise and direnv configs in new worktrees ([#312](https://github.com/luigibk/compound-engineering-plugin/issues/312)) ([cfbfb67](https://github.com/luigibk/compound-engineering-plugin/commit/cfbfb6710a846419cc07ad17d9dbb5b5a065801c))
+* improve `feature-video` skill with GitHub native video upload ([#344](https://github.com/luigibk/compound-engineering-plugin/issues/344)) ([4aa50e1](https://github.com/luigibk/compound-engineering-plugin/commit/4aa50e1bada07e90f36282accb3cd81134e706cd))
+* improve `repo-research-analyst` by adding a structured technology scan ([#327](https://github.com/luigibk/compound-engineering-plugin/issues/327)) ([1c28d03](https://github.com/luigibk/compound-engineering-plugin/commit/1c28d0321401ad50a51989f5e6293d773ac1a477))
+* improve reproduce-bug skill, sync agent-browser, clean up redundant skills ([#333](https://github.com/luigibk/compound-engineering-plugin/issues/333)) ([affba1a](https://github.com/luigibk/compound-engineering-plugin/commit/affba1a6a0d9320b529d429ad06fd5a3b5200bd8))
+* integrate claude code auto memory as supplementary data source for ce:compound and ce:compound-refresh ([#311](https://github.com/luigibk/compound-engineering-plugin/issues/311)) ([5c1452d](https://github.com/luigibk/compound-engineering-plugin/commit/5c1452d4cc80b623754dd6fe09c2e5b6ae86e72e))
+* make skills platform-agnostic across coding agents ([#330](https://github.com/luigibk/compound-engineering-plugin/issues/330)) ([52df90a](https://github.com/luigibk/compound-engineering-plugin/commit/52df90a16688ee023bbdb203969adcc45d7d2ba2))
+* migrate repo releases to manual release-please ([#293](https://github.com/luigibk/compound-engineering-plugin/issues/293)) ([f47f829](https://github.com/luigibk/compound-engineering-plugin/commit/f47f829d81bbf98b8d60fc2d2d9ac5f46fdabbe5))
+* **plugin:** add execution posture signaling to ce:plan-beta and ce:work ([#309](https://github.com/luigibk/compound-engineering-plugin/issues/309)) ([748f72a](https://github.com/luigibk/compound-engineering-plugin/commit/748f72a57f713893af03a4d8ed69c2311f492dbd))
+* promote ce:plan-beta and deepen-plan-beta to stable ([#355](https://github.com/luigibk/compound-engineering-plugin/issues/355)) ([169996a](https://github.com/luigibk/compound-engineering-plugin/commit/169996a75e98a29db9e07b87b0911cc80270f732))
+* redesign `document-review` skill with persona-based review ([#359](https://github.com/luigibk/compound-engineering-plugin/issues/359)) ([18d22af](https://github.com/luigibk/compound-engineering-plugin/commit/18d22afde2ae08a50c94efe7493775bc97d9a45a))
+* rewrite `frontend-design` skill with layered architecture and visual verification ([#343](https://github.com/luigibk/compound-engineering-plugin/issues/343)) ([423e692](https://github.com/luigibk/compound-engineering-plugin/commit/423e69272619e9e3c14750f5219cbf38684b6c96))
+
+
+### Bug Fixes
+
+* enforce release metadata consistency ([#297](https://github.com/luigibk/compound-engineering-plugin/issues/297)) ([51f906c](https://github.com/luigibk/compound-engineering-plugin/commit/51f906c9ffb94a8487bb6418549be93648b32d4a))
+* quote frontend-design skill description ([#353](https://github.com/luigibk/compound-engineering-plugin/issues/353)) ([86342db](https://github.com/luigibk/compound-engineering-plugin/commit/86342db36c0d09b65afe11241e095dda2ad2cdb0))
+* **skills:** update ralph-wiggum references to ralph-loop in lfg/slfg ([#324](https://github.com/luigibk/compound-engineering-plugin/issues/324)) ([ac756a2](https://github.com/luigibk/compound-engineering-plugin/commit/ac756a267c5e3d5e4ceb2f99939dbb93491ac4d2))
+* stabilize compound-engineering component counts ([#299](https://github.com/luigibk/compound-engineering-plugin/issues/299)) ([754c2a8](https://github.com/luigibk/compound-engineering-plugin/commit/754c2a893bd8a7381b5e498e935059efd86031a3))
+
 ## [2.51.0](https://github.com/EveryInc/compound-engineering-plugin/compare/compound-engineering-v2.50.0...compound-engineering-v2.51.0) (2026-03-24)
 
 
